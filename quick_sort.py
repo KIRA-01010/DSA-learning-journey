@@ -1,3 +1,6 @@
+# Time Complexity is on average O(nlogn)
+# Time Complexity in worst case is O(n^2) if choosing the last index as the pivot.
+
 def partition(array, low, high):
     pivot = array[high]
     i = low - 1
