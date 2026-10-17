@@ -1,3 +1,4 @@
+# It is Stable.
 # Time Complexity:
 # On Average: O(n*k)
 # Best Case: O(n)
