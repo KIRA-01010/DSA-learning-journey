@@ -5,29 +5,26 @@
 # if the number of digits k is something like
 # k(n)=logn, time complexity: O(n⋅logn)
 
-myArray = [170, 45, 75, 90, 802, 24, 2, 66]
-print("Original array:", myArray)
-radixArray = [[], [], [], [], [], [], [], [], [], []]
-maxVal = max(myArray)
+an_array = [33,5,6,34,6,77,654,43,65,66]
+print("Original Array:", an_array)
+
+radix_array = [[], [], [], [], [], [], [], [], [], []]
+max_val = max(an_array)
+
 exp = 1
 
-while maxVal // exp > 0:
+while max_val // exp > 0:
 
-    while len(myArray) > 0:
-        val = myArray.pop()
-        radixIndex = (val // exp) % 10
-        radixArray[radixIndex].append(val)
+    while len(an_array) > 0:
+        val = an_array.pop()
+        radix_index = (val // exp) % 10
+        radix_array[radix_index].append(val)
 
-    for bucket in radixArray:
+    for bucket in radix_array:
         while len(bucket) > 0:
             val = bucket.pop()
-            myArray.append(val)
-
-    if exp == 1:
-        print("First Sort:", myArray)
-    if exp == 10:
-        print("Second Sort:", myArray)
+            an_array.append(val)
 
     exp *= 10
 
-print("Final Sorted array:", myArray)
+print("Sorted Array:", an_array)
